@@ -2,6 +2,13 @@
 /*Aca uso sass para la creacion de un css con coompilación*/
 /*declararé un uso de variables par ael color*/
 /*gainboro*/
+@media only screen and (max-width: 767px) {
+  .layout {
+    display: grid;
+    grid-template-rows: 100px 40px 1fr 250px 100px;
+    grid-template-columns: 1fr;
+  }
+}
 body {
   background-color: #dcdcdc;
 }
@@ -20,15 +27,14 @@ body {
   background-color: #393646;
 }
 .layout__header img {
-  justify-self: center;
   align-self: center;
   height: 100px;
+  padding: 16px;
 }
 
 .layout__main {
   display: flex;
   grid-area: 3/2/span 1/span 1;
-  align-self: center;
   background-color: #dcdcdc;
 }
 .layout__main .ImagenSlide {
@@ -59,20 +65,21 @@ body {
 }
 
 .layout__aside {
-  display: flex;
+  display: inline-flex;
   height: auto;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   grid-area: 3/1/4/span 1;
-  align-self: center;
   background-color: gainsboro;
 }
 .layout__aside h1 {
+  display: inline-flex;
   justify-content: center;
 }
 .layout__aside p {
+  display: inline-flex;
   font: Helvetica;
-  font-size: large;
+  font-size: medium;
 }
 
 .layout__pilares {

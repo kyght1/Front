@@ -6,6 +6,16 @@ $ColorNav: #4f4557;
 $ColorGainsboro: #dcdcdc; /*gainboro*/
 $FuentePilares: Helvetica;
 $ColorFooter: #6d5d6e;
+
+
+@media only screen and (max-width: 767px) {
+  .layout{
+    display: grid;
+    grid-template-rows: 100px 40px 1fr 250px 100px;
+    grid-template-columns: 1fr;
+  }
+  
+}
 body {
   background-color: $ColorGainsboro;
 }
@@ -23,15 +33,15 @@ body {
   background-color: $ColorHeader;
 
   img {
-    justify-self: center;
+    
     align-self: center;
     height: 100px;
+    padding: 16px;
   }
 }
 .layout__main {
   display: flex;
   grid-area: 3/2 / span 1 / span 1;
-  align-self: center;
   background-color: $ColorGainsboro;
   .ImagenSlide {
     height: 1fr;
@@ -62,19 +72,20 @@ body {
 }
 
 .layout__aside {
-  display: flex;
+  display:inline-flex;
   height: auto;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   grid-area: 3 / 1 / 4 / span 1;
-  align-self: center;
   background-color: gainsboro;
   h1 {
+    display: inline-flex;
     justify-content: center;
   }
   p {
+    display: inline-flex;
     font: $FuentePilares;
-    font-size: large;
+    font-size: medium;
   }
 }
 .layout__pilares {
