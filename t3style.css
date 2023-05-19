@@ -1,0 +1,109 @@
+@charset "UTF-8";
+/*Aca uso sass para la creacion de un css con coompilación*/
+/*declararé un uso de variables par ael color*/
+/*gainboro*/
+body {
+  background-color: #dcdcdc;
+}
+
+.layout {
+  display: grid;
+  grid-template-rows: 100px 40px 1fr 250px 100px;
+  grid-template-columns: 40% 60%;
+}
+
+.layout__header {
+  display: flex;
+  justify-content: center;
+  grid-column: 1/span 2;
+  height: auto;
+  background-color: #393646;
+}
+.layout__header img {
+  justify-self: center;
+  align-self: center;
+  height: 100px;
+}
+
+.layout__main {
+  display: flex;
+  grid-area: 3/2/span 1/span 1;
+  align-self: center;
+  background-color: #dcdcdc;
+}
+.layout__main .ImagenSlide {
+  height: 1fr;
+  max-width: 100%;
+}
+
+.layout__nav {
+  grid-area: 2/1/span 1/span 2;
+  position: sticky;
+  display: flex;
+  height: 40px;
+  justify-content: space-around;
+  background-color: #4f4557;
+}
+.layout__nav p {
+  display: flex;
+  color: #dcdcdc;
+  margin: auto;
+  flex: 1 0;
+  justify-content: center;
+}
+.layout__nav img {
+  margin-left: 50px;
+  margin-right: 76px;
+  height: 30px;
+  width: 30px;
+}
+
+.layout__aside {
+  display: flex;
+  height: auto;
+  flex-direction: column;
+  justify-content: center;
+  grid-area: 3/1/4/span 1;
+  align-self: center;
+  background-color: gainsboro;
+}
+.layout__aside h1 {
+  justify-content: center;
+}
+.layout__aside p {
+  font: Helvetica;
+  font-size: large;
+}
+
+.layout__pilares {
+  display: flex;
+  flex-direction: row;
+  height: auto;
+  background-color: #dcdcdc;
+  grid-column: 1/3;
+}
+.layout__pilares .layout__pilares__pilar {
+  display: flex;
+  flex: 1 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.layout__pilares .layout__pilares__pilar .img_pilar {
+  height: 50px;
+  width: 50px;
+  align-self: center;
+}
+
+.layout__footer {
+  display: flex;
+  justify-content: space-around;
+  grid-area: 5/1/span 1/span 2;
+  background-color: #6d5d6e;
+}
+.layout__footer .texto_footer {
+  color: #dcdcdc;
+  align-self: center;
+}
+
+/*# sourceMappingURL=t3style.css.map */

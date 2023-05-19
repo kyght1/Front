@@ -1,0 +1,110 @@
+/*Aca uso sass para la creacion de un css con coompilación*/
+/*declararé un uso de variables par ael color*/
+
+$ColorHeader: #393646;
+$ColorNav: #4f4557;
+$ColorGainsboro: #dcdcdc; /*gainboro*/
+$FuentePilares: Helvetica;
+$ColorFooter: #6d5d6e;
+body {
+  background-color: $ColorGainsboro;
+}
+.layout {
+  display: grid;
+  grid-template-rows: 100px 40px 1fr 250px 100px;
+  grid-template-columns: 40% 60%;
+}
+
+.layout__header {
+  display: flex;
+  justify-content: center;
+  grid-column: 1 / span 2;
+  height: auto;
+  background-color: $ColorHeader;
+
+  img {
+    justify-self: center;
+    align-self: center;
+    height: 100px;
+  }
+}
+.layout__main {
+  display: flex;
+  grid-area: 3/2 / span 1 / span 1;
+  align-self: center;
+  background-color: $ColorGainsboro;
+  .ImagenSlide {
+    height: 1fr;
+    max-width: 100%;
+  }
+}
+.layout__nav {
+  grid-area: 2 / 1 / span 1 / span 2;
+  position: sticky;
+  display: flex;
+  height: 40px;
+  justify-content: space-around;
+
+  background-color: $ColorNav;
+  p {
+    display: flex;
+    color: $ColorGainsboro;
+    margin: auto;
+    flex: 1 0;
+    justify-content: center;
+  }
+  img {
+    margin-left: 50px;
+    margin-right: 76px;
+    height: 30px;
+    width: 30px;
+  }
+}
+
+.layout__aside {
+  display: flex;
+  height: auto;
+  flex-direction: column;
+  justify-content: center;
+  grid-area: 3 / 1 / 4 / span 1;
+  align-self: center;
+  background-color: gainsboro;
+  h1 {
+    justify-content: center;
+  }
+  p {
+    font: $FuentePilares;
+    font-size: large;
+  }
+}
+.layout__pilares {
+  display: flex;
+  flex-direction: row;
+  height: auto;
+  background-color: $ColorGainsboro;
+  grid-column: 1 / 3;
+
+  .layout__pilares__pilar {
+    display: flex;
+    flex: 1 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+    .img_pilar {
+      height: 50px;
+      width: 50px;
+      align-self: center;
+    }
+  }
+}
+.layout__footer {
+  display: flex;
+  justify-content: space-around;
+  grid-area: 5 /1 / span 1 / span 2;
+  background-color: $ColorFooter;
+  .texto_footer {
+    color: $ColorGainsboro;
+    align-self: center;
+  }
+}
