@@ -8,7 +8,7 @@ el slider de bootstrap... con el correcto trabajo de redimensionar las imagenes-
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./t3style.css" />
+    <link rel="stylesheet" href="./style.css" />
     <!--Bootstrap-->
     <link
       rel="stylesheet"
@@ -25,15 +25,22 @@ el slider de bootstrap... con el correcto trabajo de redimensionar las imagenes-
       crossorigin="anonymous"
     ></script>
 
-    <title>Tarea3_GridLayout</title>
+    <title>Tarea 3-GridLayout</title>
   </head>
   <body>
     <!--Creo el layout con css grid, y la organización a grandes rasgos-->
+    <!--Entonces, uso la nomencalutra BEM para la creacion de un layout usando CSS grid-->
+    <!--Primero, creo el div contenedor principal y además los otros elementos del layout usando clases-->
+
+
     <div class="layout">
       <header class="layout__header">
+        <!--Como usaré SASS para la creación de estilos, y gracias a la anidación que esto ofrece.. no usare clases para las
+        imagenes contenidas-->
         <img src="./MAKUNGA_DESIGN-01-01.png" alt="Logo" />
       </header>
 
+      <!--acá el Nav-->
       <nav class="layout__nav">
         <p>Inicio</p>
         <p>Aplicaciones</p>
@@ -42,7 +49,9 @@ el slider de bootstrap... con el correcto trabajo de redimensionar las imagenes-
         <img src="./lupa.png" alt="lupa" />
       </nav>
 
+      <!--Acá el Main-->
       <main class="layout__main">
+        <!--El main solo contendrá un slider importado de Bootstrap-->
         <div id="carouselExampleIndicators" class="carousel slide">
           <div class="carousel-indicators">
             <button
@@ -113,6 +122,8 @@ el slider de bootstrap... con el correcto trabajo de redimensionar las imagenes-
         </div>
       </main>
 
+      <!--Acá el Aside.. contendrá un breve mensaje de bienvenida-->
+
       <aside class="layout__aside">
         <h1>¡Bienvenido!</h1>
         <p>
@@ -123,59 +134,62 @@ el slider de bootstrap... con el correcto trabajo de redimensionar las imagenes-
         </p>
       </aside>
 
+      <!--Acá los pilares...-->
+
       <div class="layout__pilares">
-        <div class="layout__pilares__pilar">
+        <!--Aca los pilares individuales, tres en total... contienen un texto y un icono -->
+        <div class="layout__pilares--pilar">
           <img
             src="https://cdn-icons-png.flaticon.com/128/8296/8296971.png"
             alt="img1"
-            class="img_pilar"
+            class="img--pilar"
           />
           <div>
             <strong
-              ><span class="texto_pilar">
+              ><span class="texto--pilar">
                 Contamos con software <br />actualizado
               </span></strong
             >
           </div>
         </div>
 
-        <div class="layout__pilares__pilar">
+        <div class="layout__pilares--pilar">
           <img
             src="https://cdn-icons-png.flaticon.com/128/10435/10435174.png"
             alt="img2"
-            class="img_pilar"
+            class="img--pilar"
           />
           <div>
             <strong
-              ><span class="texto_pilar"
+              ><span class="texto--pilar"
                 >Profesionales capacitados</span
               ></strong
             >
           </div>
         </div>
 
-        <div class="layout__pilares__pilar">
+        <div class="layout__pilares--pilar">
           <img
             src="https://cdn-icons-png.flaticon.com/128/1316/1316740.png"
             alt="img2"
-            class="img_pilar"
+            class="img--pilar"
           />
           <div>
             <strong
-              ><span class="texto_pilar">Eficacia y Eficiencia</span></strong
+              ><span class="texto--pilar">Eficacia y Eficiencia</span></strong
             >
           </div>
         </div>
       </div>
-
+      <!--Footer... imagenes y algo de texto -->
       <footer class="layout__footer">
         <img
           src="https://cdn.pixabay.com/photo/2021/02/08/15/44/social-media-5995266_1280.png"
           alt="socialnetworks"
-          class="img_footer"
+          class="img--footer"
         />
-        <p class="texto_footer">¡Siguenos!</p>
-        <p class="texto_footer">Información Legal</p>
+        <p class="texto--footer">¡Siguenos!</p>
+        <p class="texto--footer">Información Legal</p>
       </footer>
     </div>
   </body>
