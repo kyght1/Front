@@ -59,8 +59,12 @@
     display: flex;
     color: #dcdcdc;
     margin: auto;
+    padding: 11px;
     flex: 1 0;
     justify-content: center;
+  }
+  body .layout__nav p:hover {
+    background-color: #393646;
   }
   body .layout__nav img {
     display: inline-flex;
@@ -174,6 +178,7 @@
     max-width: 100%;
   }
   body .layout__nav {
+    transition: background-color 0.5s;
     grid-area: 2/1/span 1/span 2;
     position: sticky;
     display: flex;
@@ -185,8 +190,12 @@
     display: flex;
     color: #dcdcdc;
     margin: auto;
+    padding: 8px;
     flex: 1 0;
     justify-content: center;
+  }
+  body .layout__nav p:hover {
+    background-color: #393646;
   }
   body .layout__nav img {
     display: inline-flex;

@@ -61,15 +61,20 @@ $FuenteMovil: 2.5vw;
       display: flex;
       height: 40px;
       justify-content: space-around;
-
       background-color: $ColorNav;
       p {
         display: flex;
         color: $ColorGainsboro;
         margin: auto;
+        padding: 11px;
         flex: 1 0;
         justify-content: center;
       }
+      p:hover{
+        background-color: $ColorHeader;
+
+      }
+  
       img {
         display: inline-flex;
         align-self: center;
@@ -189,6 +194,7 @@ $FuenteMovil: 2.5vw;
     }
     /*estilos de nav*/
     .layout__nav {
+      transition: background-color .5s;
       grid-area: 2 / 1 / span 1 / span 2;
       position: sticky;
       display: flex;
@@ -200,8 +206,13 @@ $FuenteMovil: 2.5vw;
         display: flex;
         color: $ColorGainsboro;
         margin: auto;
+        padding: 8px;
         flex: 1 0;
         justify-content: center;
+      }
+      p:hover{
+        background-color: $ColorHeader;
+
       }
       img {
         display: inline-flex;
